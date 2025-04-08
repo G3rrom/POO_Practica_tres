@@ -11,14 +11,14 @@ class Curso():
         print("Curso registrado.")
 
     def mostrar_info(self):
-        print(f"Curso: {self.nombre} | Numero de estudiantes: {self.est_ins} | Nivel de interaccion: {self.interaccion}")
+        print(f"Curso: {self.nombre} | Numero de estudiantes: {len(self.est_ins)} | Nivel de interaccion: {self.interaccion}")
 
     def agregar_estudiantes(self, estudiante):
         self.est_ins.append(estudiante)
         print("Alumno agregado.")
 
     def calcular_interaccion (self):
-        if len(self.est_ins) > 10:
+        if len(self.est_ins) >= 10:
             if self.interaccion == "Alta":
                 self.interaccion = "Muy alta"
                 print(f"La interaccion subio a {self.interaccion}")
